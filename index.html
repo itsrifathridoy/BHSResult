@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Individual Result | Baralia High School</title>
+</head>
+<body>
+    <style>
+        /*  style container*/
+.container{
+    width:98%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+/* style form */
+form{
+    width: 320px;
+    height: 500px;
+    margin: 2rem auto 0;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3),
+                -1px -1px 3px rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    overflow: hidden;
+    padding-top: 1rem;
+}
+/* style place holder */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #cad2da;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #cad2da;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #cad2da;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #cad2da;
+}
+
+/*logo section style*/
+form .logo img{
+    position: relative;
+    left: 40%;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+form .logo h3{
+    position: relative;
+    left: 25%;
+    margin: 0;
+    margin-top: 0rem;
+    margin-bottom: 4rem;
+    padding: 0;
+}
+
+form a{
+    text-decoration: none;
+}
+/*field style*/
+/*user name section & className section*/
+form .user-name,
+form .className{
+    width: 90%;
+    height: 5rem;
+    margin: 2rem auto;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.25);
+    transition: all 0.5s;
+}
+form  .container-1{
+    display: flex;
+    justify-content: space-around;
+}
+form .user-name label,
+form .className label{
+    color: #789c9e;
+}
+form .user-name .container-1 .user,
+form .className .container-1 .cls{
+    color: #789c9e;
+}
+form .container-1 input[type='text']{
+    outline: none;
+    border: 1px solid transparent;
+    padding:0 0.4rem;
+}
+form .container-1 a{
+    color: #789c9e;
+    transition: color 0.3s;
+}
+form .container-1 a:hover{
+    color: #40a9f8;
+}
+form .container-1 input[type='text']:focus{
+    color: #000000;
+}
+form .sign{
+    display: flex;
+    height:5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+form .sign button{
+    outline: none;
+    border: none;
+    padding: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    background: linear-gradient(to bottom,#5f4198 30%,#422b6c 70%);
+    transition: background 0.5s ease-in-out;
+}
+form .sign button:hover{
+    background: linear-gradient(to bottom,#946cde 30%,#7a49d5 70%);
+}
+form .sign a{
+    color: #789c9e;
+    transition: color 0.3s;
+}
+form .sign a:hover{
+    color: #40a9f8;
+}
+form .container-2{
+    display: flex;
+    height: 80px;
+    position: relative;
+}
+form .balls{
+    width: 140px;
+    height: 140px;
+    background-image: linear-gradient(to right,#58d9e5 30%,#40a9f8 70%);
+    border-radius: 50%;
+    position: absolute;
+}
+form .balls:before,
+form .balls:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+}
+form .balls:first-of-type{
+    left: 30%;
+    top:1rem;
+    z-index: 2;
+}
+form .balls:first-of-type:before{
+    width:120px;
+    height:120px;
+    left:-60px;
+    top:30px;
+    background-image: linear-gradient(to right,#58d9e5 30%,#40a9f8 70%);
+}
+form .balls:first-of-type:after{
+    left: -92px;
+    top: 42.5px;
+    background-image: linear-gradient(to right,#58d9e5 30%,#40a9f8 70%);
+}
+form .balls:last-of-type{
+    top:2rem;
+    left:48%;
+    z-index:1;
+}
+form .balls:last-of-type:before{
+    background: aqua;
+    right: -37px;
+    top: 16px;
+    background-image: linear-gradient(to right,#58d9e5 30%,#40a9f8 70%);
+}
+    </style>
+
+    <div class="container">
+        <form action="https://bhsresult.webhunt.workers.dev/" method="GET" onsubmit="submited=true">
+          <!-- logo section -->
+          <div class="logo">
+            <img src="https://lh7-us.googleusercontent.com/sheets/ACTFsxRb5sl-9oU5Moow-jAD3QLIzKPwPC0QDefylf3eSRvwjMYSKDLJftGrNLYlirM3iSWvWRhcl7UXaAcmDxyOue8V74pY-ix-9iMH7vXksjHkrgJPBAi1WVpeN1R31NuD1MHQqWfFgR_-5Zzy76ZZg4bPZOyOO8tVEv2r6anyjeuwVPHEnDRH5uvmu2shncuo06OvAbS89Af2qMq2ooT4wpA0QOdkwiCCxwF2k2USqmBVAMWmgkCBhHNDrpu2nvGqBbCyN6Lfw_0oADlRI5RJsv6wSkjqqPMMYNAO7gK3XXXhJ2mV32XbE_cfBstY5f4TLlqxfiTz44ErV40r0ngy3cDBTElI5Capo0yXwGsLP6jZ4xnV5G0JiUYW9A8lOGXk6xUOMHeR752XEPyiqgwrpFPGQ_X-BoE_VIsbGWMVetpZ9HCrUq9zE7spPBCiFY8KXdBvZfkyE1c3XhHJB1UF0STQsQy0_yeAyqy5s_PYfJYJPONbMRz13l_p_x5IK1btjM2KauBGOWNjX-y_SQ9VgU63vA6g04cVzJCeimYUV11PtH3krq91E5JO3nsIogED_PlTOwffwyaN_91rqV7mQ8L-ccxvylc_rVZoXaUHspgTkI_YoTqlZ8-Q_n0L0-jH6kblwKHMIEMito2xNehIF1ETLMP3Fy9vSIYKee6lO_OjV3NRwT8TrKqN9L8pvxESh-XAtUHDIAyfq3NRC6k6gLDwGPaKxl1u8n1LYnB4UYgOLAJfbstlQwBLjS9wLg4zweTyHcBPx1nkJaiVWDJ5N1DNethafXGUMnHOCQcrJbGp_jHa6IEd7QftOkQC1AFr40puW15lf-fHwOwCCoPi9n2NQUtddnTV1M2R9F657PhyEOkApgrqJr3qNg81yJ1DTuPzk2TNhGgfA7x7-dHqncWJ1PSAjV9bCDRMjVLB1MskBho1pQzQTXJYhQA0boWE_TVAX_r_t2K5qKs4AfgKqkhve1RO0mLJXGLWzh1EG78LB7jDt3xRFAn1AalvGsWEB7DZfd1JCrXdFE0iUAeX1mXzoX8hkNNvaGYEiSuEWTzkkfl641VSXwSDjac1hnovpimrWqGgufVJig-gWXgU6qnJcnHlrZ0cfRNuuy3R2Gds4xV1L4uy-rTAKEb9WOZb2SFEwJYDCMQSmOMmcF648ccu_8RSXzmk35oDJufRFU7flubd6vNMaTBFLilhQGSeCOhnfTLR7yWlsNjr_1WIlgumSGIcLlRLkw=w230-h79" alt="" srcset="">
+            <h3>Baralia High School</h3>
+        </div>
+          <!--  user name section -->
+          <div class="user-name">
+            <label for="id">Roll</label>
+            <div class="container-1">
+              <i class="fa fa-user-o user" aria-hidden="true"></i>
+              <input type="text" id="id" name="id" placeholder="Type Your Roll Number">
+            </div>
+          </div><!--  end user name section -->
+          <!--    className section       -->
+          <div class="className">
+            <label for="className">Class</label>
+            <div class="container-1">
+              <i class="fa fa-at cls" aria-hidden="true"></i>
+              <input type="text" id="className" placeholder="Type Your Class">
+            </div>
+          </div><!-- end className section -->
+          <!-- sign section -->
+          <div class="sign">
+            <button>Find Result</button>
+          </div><!-- end sign section -->
+        </form>
+       </div>
+    
+</body>
+</html>
